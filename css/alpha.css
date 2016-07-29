@@ -52,6 +52,10 @@ body {
     margin-top: 50%;
 }
 
+#site-wrap {
+    position: relative;
+    min-height: 100%;
+}
 
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 /* /    Wonka-Alpha CSS Top Bar From Left to Right  / */ 
@@ -83,13 +87,17 @@ body {
     border-radius: 10px;
 }
 
-.top-bar ul li {
+/*.menu ul li {
     min-width: 40px;
     padding: 2.7em 0px 2.7em 0px;
+}*/
+
+.menu > li > a {
+    color: #ffffff;
 }
 
-.top-bar ul li a {
-    color: #fff;
+.menu > li > a:hover {
+    color: #919a63;
 }
 
 .wa-menu-button {
@@ -122,9 +130,9 @@ body {
     }
 
     .wa-clear-center {
-   clear: both;
-   margin: auto;
-}
+        clear: both;
+        margin: auto;
+    }
 
 }
 
@@ -154,7 +162,11 @@ body {
 
 .search-input {
     border-radius: 10px;
+}
 
+.wa-vertical-align {
+    vertical-align: middle;
+    
 }
 
 /* //////////////////////////////////////////////////////// */
@@ -180,19 +192,8 @@ h3 {
     font-size: 26px;
 }
 
-#site-wrap {
-    position: relative;
-    min-width: 100%;
-}
-
-content {
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 10px auto;
-    border-radius:  10px;
+#wa-content {
+    padding-bottom: 75px;
 }
 
 .wa-content-text {
@@ -204,7 +205,7 @@ content {
 }
 
 .toner {
-    color:  #b21819;
+    color:  #ff1f20;
 }
 
 #wa-center-quote {
@@ -226,7 +227,7 @@ content {
     padding: 1.5em 0;
 }
 
-footer {
+#wa-footer {
     position: absolute;
     background-color: #b21819;
     width: 100%;
