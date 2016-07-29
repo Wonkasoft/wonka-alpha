@@ -1,5 +1,5 @@
 # Wonka-Alpha Theme
-# New WordPress Theme with Foundation v6
+## New WordPress Theme with Foundation v6
 
 Version: 1.0.0
 
