@@ -5,7 +5,7 @@
 /* ////////////////////////////////////////////////////////////// */
 /* /    Wonka-Alpha Fonts Import      / */ 
 /* //////////////////////////////////////////////////////////// */
-@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Oswald: 400, 300);
 
 /* ///////////////////////////////////////////////// */
 /* /  Wonka Admin Formatting / */ 
@@ -25,6 +25,14 @@ li#customAdmin {
 }
 
 /* /////////////////////////////////////////////////////////////////////// */
+/* /    Wonka-Alpha CSS Transitions      / */ 
+/* //////////////////////////////////////////////////////////////////// */
+.top-bar-wrapper, .wa-sub-menu-list-inline, .menu > li > a, a, .menu-main-navigation-container, #wa-content, #wa-footer, .wa-sub-menu-bottom .menu-sub-menu-container {
+    transition:  all .3s ease-in-out;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////// */
 /* /    Wonka-Alpha CSS Body and Wrap      / */ 
 /* //////////////////////////////////////////////////////////////////// */
 
@@ -34,7 +42,7 @@ html {
     padding:0;
 }
 
-body, content, footer {
+body, header, content, footer {
     font-family:  "Oswald" , sans-serif;
     font-weight: 400;
 }
@@ -45,6 +53,11 @@ body {
     height: 100% !important; 
     margin:0;
     padding: 0;
+}
+
+header, footer {
+    font-weight: 300;
+    text-align: center;
 }
 
 .company-logos {
@@ -65,13 +78,13 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 5;
+    z-index: 1000;
 }
 
 .top-bar {
     background: rgba(0,0,0,0.6);
     border-radius: 10px;
-    max-width:  75%;
+    max-width:  1305px;
     padding:0;
     margin: 0 auto;
 
@@ -79,6 +92,11 @@ body {
 
 .top-bar-title {
     padding:0px;
+    margin: 3px;
+}
+
+.wa-top-bar-padding {
+    margin: 4.55rem 10rem 0 0;
 }
 
 .top-bar ul {
@@ -87,21 +105,76 @@ body {
     border-radius: 10px;
 }
 
-/*.menu ul li {
-    min-width: 40px;
-    padding: 2.7em 0px 2.7em 0px;
-}*/
+.wa-top-bar-height {
+    height: 142px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+/* /    Wonka-Alpha CSS Menu  / */ 
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+.wa-sub-menu-list-inline {
+    z-index: 50;
+    top: .5em;
+    right: 5em;
+    position: absolute;
+    margin: 0;
+    height: 40px;
+    list-style-type: none;
+}
+
+.wa-sub-menu-list-inline > li {
+    vertical-align: middle;
+    display: table-cell;
+    color: #ffffff;
+    height: 40px;
+    padding: 0 .6rem;
+}
+
+.wa-sub-menu-list-inline > li:nth-child(3) {
+    padding-right: 0;
+}
+
+#menu-sub-menu > li:first-child {
+    border-right: 1px solid #ffffff;
+}
+
+#menu-sub-menu-1 > li:first-child {
+    border-right: 1px solid #ffffff;
+}
+
+.wa-top-bar-menu-alignment {
+    position: relative;
+    height: 142px;
+    width: 900px;
+    margin: auto;
+}
+
+.menu-main-navigation-container {
+    position: absolute;
+    width: 100%;
+    bottom: 2px;
+    z-index: 0;
+}
+
+#menu-main-navigation > li {
+    background-image:  url('../images/menu-button-bg.png');
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 225px;
+}
 
 .menu > li > a {
+    margin: auto;
     color: #ffffff;
+    padding: 3px 8px;
 }
 
 .menu > li > a:hover {
     color: #919a63;
 }
 
-.wa-menu-button {
-   float: right;
+.wa-sub-menu-top {
+    position: relative;
 }
 
 .wa-burger-menu-text {
@@ -109,31 +182,6 @@ body {
    vertical-align: middle;
    padding-left: .5em;
    text-transform: uppercase;
-}
-
-@media screen and (max-width:1024px) {
-    .top-bar {
-        max-width: 100%;
-        border-radius: 0;
-    }
-
-    .top-bar-title {
-    padding:20px;
-    }
-
-    .top-bar ul li {
-        padding: 5px;
-    }
-
-    .top-bar-wrapper {
-        position: relative;
-    }
-
-    .wa-clear-center {
-        clear: both;
-        margin: auto;
-    }
-
 }
 
 .custom-logo {
@@ -151,8 +199,14 @@ body {
     text-align: center;
     height: 135px;
     width: 110px;
+    margin: 3px;
     border-radius: 10px;
     background-color:  rgba(255,255,255,0.8);
+}
+
+.search-form-container {
+    width:  490px;
+    margin: 0;
 }
 
 .search-icon {
@@ -162,13 +216,32 @@ body {
 
 .search-input {
     border-radius: 10px;
+    margin: 0;
+    min-width: 100%;
 }
+
+/* //////////////////////////////////////////////////////// */
+/* /   Wonka-Alpha CSS Miscellaneous  Classes to use   / */ 
+/* ////////////////////////////////////////////////////// */
 
 .wa-vertical-align {
     vertical-align: middle;
-    
-}
+    }
 
+.wa-clear-centered {
+        clear: both;
+        margin: auto;
+        float: none;
+    }
+
+.wa-centered {
+        margin: auto;
+        float: none;
+    }
+
+.wa-logo-margin {
+    margin-left: 120px;
+}
 /* //////////////////////////////////////////////////////// */
 /* /   Wonka-Alpha CSS Slider     / */ 
 /* ////////////////////////////////////////////////////// */
@@ -193,7 +266,7 @@ h3 {
 }
 
 #wa-content {
-    padding-bottom: 75px;
+    padding-bottom: 120px;
 }
 
 .wa-content-text {
@@ -221,19 +294,108 @@ h3 {
 /* /   Wonka-Alpha CSS Start Footer    / */ 
 /* ///////////////////////////////////////////////////////// */
 
-.copyright-div {
-    /*position: relative;*/
-    margin: auto 0;
-    padding: 1.5em 0;
+#wa-footer:before {
+    content: "";
+    clear: both;
 }
 
 #wa-footer {
     position: absolute;
     background-color: #b21819;
     width: 100%;
-    height: 80px;
+    height: 120px;
     left: 0;
     bottom: 0;
     color: #fff;
 }
 
+.copyright-div {
+    margin: auto;
+    padding: 1.5em 0;
+}
+
+.designer-credit > a {
+    color: #ffffff;
+}
+
+.designer-credit > a:hover {
+    color: #919a63;
+}
+
+.wa-sub-menu-bottom .menu-sub-menu-container {
+    margin: auto;
+    width: 194px;
+    padding: 1em 0;
+    float: right;
+}
+
+/* /////////////////////////////////////////////////////////// */
+/* /   Wonka-Alpha CSS @media screen    / */ 
+/* ///////////////////////////////////////////////////////// */
+
+@media screen and (max-width:1023px) {
+    .top-bar-wrapper {
+        position: relative;
+    }
+
+    .top-bar-wrapper:after {
+        content: " ";
+        clear: both;
+        display: block;
+        bottom: 0;
+    }
+
+    .top-bar {
+        min-width: 100%;
+        border-radius: 0;
+    }
+
+    .top-bar-title {
+        padding:20px;
+    }
+
+    .top-bar input {
+        max-width: 225px;
+        margin-right: 0;
+    }
+
+    .wa-top-bar-menu-alignment {
+        margin: 0;
+        width: 100%;
+    }
+
+    .wa-logo-margin {
+        margin: 0;
+    }
+
+    .menu-main-navigation-container {
+        top: 0;
+    }
+
+    #menu-main-navigation > li {
+        background-color: #7b1717;
+        background-image: none;
+        padding: 1.2em;
+        margin: .3em .3em;
+        background-position: 50% 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-form-container {
+        width: 100%;
+    }
+
+    #wa-content {
+        padding-bottom: 189px;
+    }
+
+    #wa-footer {
+        height: 189px;
+    }
+
+    .wa-sub-menu-bottom .menu-sub-menu-container {
+        float: none;
+    }
+}
