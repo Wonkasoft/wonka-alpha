@@ -83,7 +83,8 @@ function wonkaAdmin() {
 
 	document.getElementById("wp-admin-bar-root-default").appendChild(wli);
 
-            $('.site-wrap').css('margin_top', '32px');
+            $('#site-wrap').css('margin_top', '32px');
+            
 	</script>
 <?php
 }
