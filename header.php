@@ -21,7 +21,7 @@
                 <li><button type="button" class="search-icon"><img src="<?php echo bloginfo('template_directory') . '/images/search-icon.png'; ?> " alt="search-icon" /></button></li>
                 <li><button type="button" class=""><img class="wa-chart" src="<?php echo bloginfo('template_directory') . '/images/shopping-chart.png'; ?>" /></button></li>
                 <li>
-                  <?php wp_nav_menu(array('theme_location'=>'third')); ?>
+                  <?php wp_nav_menu(array('container_id'=>'menu-sub-menu-top', 'theme_location'=>'third')); ?>
                 </li>
               </ul>
             </div>
@@ -45,7 +45,7 @@
           <div class="wa-logo-margin">
             <div class="top-bar-right wa-centered">
             <div class="wa-top-bar-menu-alignment">
-              <?php wp_nav_menu(array('theme_location'=>'primary')); ?> 
+              <?php wp_nav_menu(array('container_id'=>'menu-main-nav', 'theme_location'=>'primary')); ?> 
               </div>
             </div>
           </div>
