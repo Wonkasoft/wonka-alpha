@@ -14,10 +14,10 @@
      <header>
        <div class="top-bar-wrapper">
          <div class="top-bar">
-           <div class="wa-sub-menu-top">
+           <div class="show-for-large wa-sub-menu-top">
            <div class="top-bar-right">
                <ul class="wa-sub-menu-list-inline">
-                <li><?php get_search_form(); ?></li>
+                <li><?php get_search_form(array('wa-search-for-large')); ?></li>
                 <li><button type="button" class="search-icon"><img src="<?php echo bloginfo('template_directory') . '/images/search-icon.png'; ?> " alt="search-icon" /></button></li>
                 <li><button type="button" class=""><img class="wa-chart" src="<?php echo bloginfo('template_directory') . '/images/shopping-chart.png'; ?>" /></button></li>
                 <li>
@@ -42,15 +42,24 @@
            </div>
          </div>
          <div id="responsive-menu">
+         <div class="hide-for-large wa-backing"><?php  
+             if (has_custom_logo('$blog_id = 0') ) {
+               the_custom_logo( $blog_id = 0 );
+             }  ?>
+           </div>
           <div class="wa-logo-margin">
             <div class="top-bar-right wa-centered">
             <div class="wa-top-bar-menu-alignment">
               <?php wp_nav_menu(array('container_id'=>'menu-main-nav', 'theme_location'=>'primary')); ?> 
+              <ul class="hide-for-large wa-responsive-search">
+                <li><button type="button" class="search-icon"><img src="<?php echo bloginfo('template_directory') . '/images/search-icon.png'; ?> " alt="search-icon" /></button></li>
+                <li><?php get_search_form(); ?></li>
+                </ul>
               </div>
             </div>
-          </div>
         </div> 
       </div> 
+    </div>
     </div>
   </header>
 </div>
