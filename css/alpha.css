@@ -27,7 +27,7 @@ li#customAdmin {
 /* /////////////////////////////////////////////////////////////////////// */
 /* /    Wonka-Alpha CSS Transitions      / */ 
 /* //////////////////////////////////////////////////////////////////// */
-.top-bar-wrapper, .wa-sub-menu-list-inline, .menu > li > a, a, .menu-main-navigation-container, #wa-content, #wa-footer, .wa-sub-menu-bottom .menu-sub-menu-container {
+.top-bar-wrapper, .top-bar, .wa-sub-menu-list-inline, .menu > li > a, a, .menu-main-nav, #wa-content, #wa-footer, #menu-sub-menu-top, #menu-sub-menu-bottom, #menu-main-nav > ul > li, .wa-top-bar-menu-alignment {
     transition:  all .3s ease-in-out;
 }
 
@@ -134,11 +134,11 @@ header, footer {
     padding-right: 0;
 }
 
-#menu-sub-menu > li:first-child {
+#menu-sub-menu-top > ul > li:first-child {
     border-right: 1px solid #ffffff;
 }
 
-#menu-sub-menu-1 > li:first-child {
+#menu-sub-menu-bottom > ul > li:first-child {
     border-right: 1px solid #ffffff;
 }
 
@@ -149,14 +149,14 @@ header, footer {
     margin: auto;
 }
 
-.menu-main-navigation-container {
+#menu-main-nav {
     position: absolute;
     width: 100%;
     bottom: 2px;
     z-index: 0;
 }
 
-#menu-main-navigation > li {
+#menu-main-nav > ul > li {
     background-image:  url('../images/menu-button-bg.png');
     background-repeat: no-repeat;
     height: 65px;
@@ -175,6 +175,7 @@ header, footer {
 
 .wa-sub-menu-top {
     position: relative;
+    margin: 0;
 }
 
 .wa-burger-menu-text {
@@ -218,6 +219,11 @@ header, footer {
     border-radius: 10px;
     margin: 0;
     min-width: 100%;
+}
+
+.wa-responsive-search {
+    list-style-type: none;
+    margin: .3em 0 .3em;
 }
 
 /* //////////////////////////////////////////////////////// */
@@ -322,9 +328,9 @@ h3 {
     color: #919a63;
 }
 
-.wa-sub-menu-bottom .menu-sub-menu-container {
+#menu-sub-menu-bottom > ul {
     margin: auto;
-    width: 194px;
+    width: 120px;
     padding: 1em 0;
     float: right;
 }
@@ -368,19 +374,32 @@ h3 {
         margin: 0;
     }
 
-    .menu-main-navigation-container {
+    #menu-main-nav {
         top: 0;
+        position: relative;
     }
     
-    #menu-main-navigation > li {
+    #menu-main-nav > ul > li {
         background-color: #7b1717;
         background-image: none;
         padding: 1.2em;
-        margin: .3em .3em;
+        margin: .1em 0 0;
         background-position: 50% 0;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #menu-main-nav > ul > li:hover {
+        background-color: rgba(212, 53, 53, .8);
+    }
+
+    .wa-top-bar-menu-alignment {
+        height: inherit;
+    }
+
+    .wa-backing {
+        margin: .2em auto;
     }
 
     .search-form-container {
@@ -395,7 +414,12 @@ h3 {
         height: 189px;
     }
 
-    .wa-sub-menu-bottom .menu-sub-menu-container {
+    #menu-sub-menu-bottom {
+        text-align: center;
+    }
+
+    #menu-sub-menu-bottom > ul {
         float: none;
+        margin: auto;
     }
 }

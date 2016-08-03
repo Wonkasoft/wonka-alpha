@@ -3,7 +3,7 @@
         <div class="row expanded">
             <div class="small-12 large-6 large-push-6 columns">
                 <div class="wa-sub-menu-bottom">
-                 <?php wp_nav_menu(array('theme_location'=>'third')); ?>
+                 <?php wp_nav_menu(array('container_id'=>'menu-sub-menu-bottom' , 'theme_location'=>'third')); ?>
              </div>
          </div>
          <div class="small-12 large-6 large-pull-6 columns">
