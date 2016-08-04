@@ -8,7 +8,7 @@
          </div>
          <div class="small-12 large-6 large-pull-6 columns">
              <div class="copyright-div">
-                <span class='copyright-pre'><?php esc_attr_e('Copyright ©', 'preference'); ?> </span> <span class='copyright-date'><?php echo ' '; _e(date('Y')); echo ' ';?></span><span class='copyright-custom'> <?php echo get_theme_mod('wa_copyright'); ?></span> | Website by <span class="designer-credit"><a href=<?php echo get_theme_mod('wa_designed_url'); ?> title="Website by Wonkasoft.com" ><?php echo get_theme_mod('wa_designed'); ?></a></span>
+                <span class='copyright-pre'><?php esc_attr_e('Copyright ©', 'preference'); ?> </span> <span class='copyright-date'><?php echo ' '; _e(date('Y')); echo ' ';?></span><span class='copyright-custom'> <?php echo get_theme_mod('wa_copyright'); ?></span> | Website by <span class="designer-credit"><a href="<?php echo get_theme_mod('wa_designed_url'); ?>"title="Website by Wonkasoft.com" ><?php echo get_theme_mod('wa_designed'); ?></a></span>
             </div>
         </div>
     </div>

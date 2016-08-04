@@ -11,7 +11,6 @@
   <div id="site-wrap">
     <div id="wa-header"> <!-- Start of Header wrap -->
      <!-- Primary Menu with Logo -->
-     <header>
        <div class="top-bar-wrapper" data-sticky-container>
        <div class="top-bar hide-for-large sticky" data-sticky data-options="marginTop:0;">
           <div class="top-bar-title">
@@ -86,5 +85,4 @@
       </div> 
     </div>
     </div>
-  </header>
 </div>

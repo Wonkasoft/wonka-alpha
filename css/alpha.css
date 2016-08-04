@@ -10,30 +10,30 @@
     src:url('../fonts/Oswald-Light.ttf');
 }
 
+/* /////////////////////////////////////////////////////////////////////// */
+/* /    Wonka-Alpha CSS Transitions      / */ 
+/* //////////////////////////////////////////////////////////////////// */
+.adminAnchor-text, .top-bar-wrapper, .top-bar, .wa-sub-menu-list-inline, .menu > li > a, a, .menu-main-nav, #wa-content, #wa-footer, #menu-sub-menu-top, #menu-sub-menu-bottom, #menu-main-nav > ul > li, .wa-top-bar-menu-alignment {
+    transition:  all .3s ease-in-out !important;
+}
+
 /* ///////////////////////////////////////////////// */
 /* /  Wonka Admin Formatting / */ 
 /* /////////////////////////////////////////////// */
 
-li#customAdmin {
-    left: 50% !important ; 
-    background-color: #4a8e7d;
+#customAdmin {
+    left: 25% !important ; 
+    background-color: #ff1f20 !important;
 }
 
 .adminAnchor-text {
-    color: #17252e;
+    font-family: Oswaldimport !important;
+    color: #ffffff;
 }
 
-.adminAnchor-text {
-    color: #17252e;
+.adminAnchor-text:hover {
+    color: #000000;    
 }
-
-/* /////////////////////////////////////////////////////////////////////// */
-/* /    Wonka-Alpha CSS Transitions      / */ 
-/* //////////////////////////////////////////////////////////////////// */
-.top-bar-wrapper, .top-bar, .wa-sub-menu-list-inline, .menu > li > a, a, .menu-main-nav, #wa-content, #wa-footer, #menu-sub-menu-top, #menu-sub-menu-bottom, #menu-main-nav > ul > li, .wa-top-bar-menu-alignment {
-    transition:  all .3s ease-in-out;
-}
-
 
 /* /////////////////////////////////////////////////////////////////////// */
 /* /    Wonka-Alpha CSS Body and Wrap      / */ 
@@ -58,6 +58,11 @@ body {
     padding: 0;
 }
 
+body.custom-background {
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: multiply;
+}
+
 header, footer {
     font-weight: 300;
     text-align: center;
@@ -71,6 +76,10 @@ header, footer {
 #site-wrap {
     position: relative;
     min-height: 100%;
+}
+
+.entry-title {
+    visibility: hidden;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////// */

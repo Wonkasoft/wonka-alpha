@@ -77,6 +77,7 @@ function wonkaAdmin() {
 	wli.id = "customAdmin";
 	wli.appendChild(wa);
 	wa.className = "adminAnchor";
+      wa.href = "http://localhost/amazontoner/wp-admin/customize.php?url=http%3A%2F%2Flocalhost%2Famazontoner%2F";
 	wa.appendChild(wspan);
 	wspan.className = "adminAnchor-text";
 	wspan.innerHTML = "Wonka Admin";
