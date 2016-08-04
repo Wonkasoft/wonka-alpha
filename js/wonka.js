@@ -2,6 +2,15 @@ $( document ).ready(function() {
   checkSize();
   $(window).resize(checkSize);
 
+// Primary Mobile Menu
+ var wa_menu_li = document.createElement('li');
+ var wa_menu_a = document.createElement('a');
+ wa_menu_li.appendChild(wa_menu_a);
+ wa_menu_a.href = "/";
+ wa_menu_li.className = "hide-for-large";
+ wa_menu_a.innerHTML = "Home";
+ $('#menu-main-nav > ul').prepend(wa_menu_li);
+
   // Orbit Changes
    $('.orbit-container').css('height','100%');
    $('.orbit-slide').css('height','100%');
