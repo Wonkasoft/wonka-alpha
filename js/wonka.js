@@ -5,13 +5,10 @@ $( document ).ready(function() {
   // Orbit Changes
    $('.orbit-container').css('height','100%');
    $('.orbit-slide').css('height','100%');
-<<<<<<< HEAD
    $('.search-input').hide(); 
-=======
 
    // Search changes
    $('.search-input').hide();   
->>>>>>> refs/remotes/origin/master
        $('.search-icon').click(function() {
            $('.search-input').slideToggle().focus().val("");
        });
