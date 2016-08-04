@@ -5,7 +5,10 @@
 /* ////////////////////////////////////////////////////////////// */
 /* /    Wonka-Alpha Fonts Import      / */ 
 /* //////////////////////////////////////////////////////////// */
-@import url(https://fonts.googleapis.com/css?family=Oswald: 400, 300);
+@font-face {
+    font-family: Oswaldimport;
+    src:url('../fonts/Oswald-Light.ttf');
+}
 
 /* ///////////////////////////////////////////////// */
 /* /  Wonka Admin Formatting / */ 
@@ -43,7 +46,7 @@ html {
 }
 
 body, header, content, footer {
-    font-family:  "Oswald" , sans-serif;
+    font-family:  Oswaldimport;
     font-weight: 400;
 }
 
