@@ -12,8 +12,33 @@
     <div id="wa-header"> <!-- Start of Header wrap -->
      <!-- Primary Menu with Logo -->
      <header>
-       <div class="top-bar-wrapper">
-         <div class="top-bar">
+       <div class="top-bar-wrapper" data-sticky-container>
+       <div class="top-bar hide-for-large sticky" data-sticky data-options="marginTop:0;">
+          <div class="top-bar-title">
+            <div class="wa-menu-button">
+             <span data-responsive-toggle="responsive-menu" data-hide-for="large">
+               <button class="menu-icon" type="button" data-toggle></button>
+             </span>
+             <span  class="wa-burger-menu-text" data-responsive-toggle="responsive-menu" data-hide-for="large">
+               MENU - Inland  <span class="toner">Toner</span>
+             </span>
+           </div>
+         </div>
+         <div id="responsive-menu">
+          <div class="wa-logo-margin">
+            <div class="top-bar-right wa-centered">
+            <div class="wa-top-bar-menu-alignment">
+              <?php wp_nav_menu(array('container_id'=>'menu-main-nav', 'theme_location'=>'primary')); ?> 
+              <ul class="hide-for-large wa-responsive-search">
+                <li><button type="button" class="search-icon"><img src="<?php echo bloginfo('template_directory') . '/images/search-icon.png'; ?> " alt="search-icon" /></button></li>
+                <li><?php get_search_form(); ?></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+         <div class="top-bar show-for-large">
            <div class="show-for-large wa-sub-menu-top">
            <div class="top-bar-right">
                <ul class="wa-sub-menu-list-inline">
